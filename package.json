@@ -1,0 +1,29 @@
+{
+  "name": "@nealst/algorithm",
+  "version": "1.0.0",
+  "description": "常用算法的javascript实现",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NealST/algorithm.git"
+  },
+  "keywords": [
+    "algorithm",
+    "javascript"
+  ],
+  "author": "墨筝",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NealST/algorithm/issues"
+  },
+  "homepage": "https://github.com/NealST/algorithm#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.3.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "jest": "^26.0.1"
+  }
+}
