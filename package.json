@@ -6,7 +6,8 @@
   "module": "./es/index.js",
   "scripts": {
     "test": "jest --coverage",
-    "build": "gulp"
+    "build": "gulp",
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
