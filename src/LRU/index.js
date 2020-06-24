@@ -26,7 +26,7 @@ class LRUCache {
       this.processMapIndex();
     }
     const len = this.dataList.length;
-    if (len === this.size) {
+    if (len > this.size) {
       // 如果当前已经达到缓存上限就将最后一个元素干掉
       const lastItem = this.dataList[len - 1];
       this.dataMap.set(lastItem.key, null);
@@ -36,17 +36,21 @@ class LRUCache {
 
   get(key) {
     const theData = this.dataMap.get(key);
-    const theIndex = theData.index;
-    moveToFirst(theIndex, this.dataList);
-    this.processMapIndex();
-    return theData ? theData.value : -1;
+    if (theData) {
+      const theIndex = theData.index;
+      moveToFirst(theIndex, this.dataList);
+      this.processMapIndex();
+      return theData.value
+    } else {
+      return -1
+    }
   }
   
   // 同步索引值和value值
   processMapIndex() {
     this.dataList.forEach((item, index) => {
       const key = item.key;
-      const mapItem = this.dataMap.get(key);
+      let mapItem = this.dataMap.get(key) || {};
       mapItem.index = index;
       mapItem.value = item.value;
       this.dataMap.set(key, mapItem);
