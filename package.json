@@ -26,7 +26,8 @@
   "homepage": "https://github.com/NealST/algorithm#readme",
   "husky": {
     "hooks": {
-      "pre-push": "npm run lint && npm run test && npm run build"
+      "pre-push": "npm run lint && npm run test",
+      "pre-publish": "npm run test && npm run build"
     }
   },
   "devDependencies": {

@@ -39,7 +39,7 @@ var LRUCache = /*#__PURE__*/function () {
 
       var len = this.dataList.length;
 
-      if (len === this.size) {
+      if (len > this.size) {
         // 如果当前已经达到缓存上限就将最后一个元素干掉
         var lastItem = this.dataList[len - 1];
         this.dataMap.set(lastItem.key, null);
@@ -50,10 +50,15 @@ var LRUCache = /*#__PURE__*/function () {
     key: "get",
     value: function get(key) {
       var theData = this.dataMap.get(key);
-      var theIndex = theData.index;
-      moveToFirst(theIndex, this.dataList);
-      this.processMapIndex();
-      return theData ? theData.value : -1;
+
+      if (theData) {
+        var theIndex = theData.index;
+        moveToFirst(theIndex, this.dataList);
+        this.processMapIndex();
+        return theData.value;
+      } else {
+        return -1;
+      }
     } // 同步索引值和value值
 
   }, {
@@ -63,9 +68,7 @@ var LRUCache = /*#__PURE__*/function () {
 
       this.dataList.forEach(function (item, index) {
         var key = item.key;
-
-        var mapItem = _this.dataMap.get(key);
-
+        var mapItem = _this.dataMap.get(key) || {};
         mapItem.index = index;
         mapItem.value = item.value;
 
