@@ -13,7 +13,7 @@ function getPrime(n) {
   for(let i = 2; i * i < n; i++) {
     // 如果当前数是素数，那么相乘之后的数字就肯定不是素数
     if (primes[i]) {
-      for(j = i * i; j < n; j += i) {
+      for(let j = i * i; j < n; j += i) {
         primes[j] = false
       }
     }

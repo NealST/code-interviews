@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1592976839771" clover="3.2.0">
-  <project timestamp="1592976839772" name="All files">
-    <metrics statements="37" coveredstatements="37" conditionals="12" coveredconditionals="11" methods="6" coveredmethods="6" elements="55" coveredelements="54" complexity="0" loc="37" ncloc="37" packages="2" files="2" classes="2"/>
+<coverage generated="1592991548082" clover="3.2.0">
+  <project timestamp="1592991548082" name="All files">
+    <metrics statements="50" coveredstatements="50" conditionals="18" coveredconditionals="17" methods="7" coveredmethods="7" elements="75" coveredelements="74" complexity="0" loc="50" ncloc="50" packages="3" files="3" classes="3"/>
     <package name="LRU">
       <metrics statements="30" coveredstatements="30" conditionals="10" coveredconditionals="9" methods="5" coveredmethods="5"/>
       <file name="index.js" path="/Users/mozheng/projects/algorithm/src/LRU/index.js">
@@ -36,6 +36,25 @@
         <line num="54" count="10" type="stmt"/>
         <line num="55" count="10" type="stmt"/>
         <line num="56" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="Prime">
+      <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <file name="index.js" path="/Users/mozheng/projects/algorithm/src/Prime/index.js">
+        <metrics statements="13" coveredstatements="13" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="5" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="15" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="17" count="16" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="26" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="12" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
       </file>
     </package>
     <package name="utils">
